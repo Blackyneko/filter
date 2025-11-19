@@ -62,6 +62,7 @@ DOMAIN, makersuite.google.com
 # Gemini API
 DOMAIN, autopush-gemini.sandbox.googleapis.com
 DOMAIN, googleapis.com
+DOMAIN-SUFFIX, googleapis.com
 DOMAIN-KEYWORD, gemini
 DOMAIN-KEYWORD, ai-studio
 
