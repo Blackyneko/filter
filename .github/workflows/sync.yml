@@ -1,0 +1,96 @@
+name: Sync approved rule sources
+
+on:
+  schedule:
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: rule-source-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out main
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Validate current repository
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 scripts/validate_rules.py
+          python3 scripts/privacy_scan.py
+
+      - name: Download fixed sources and build candidates
+        run: python3 scripts/sync_rules.py
+
+      - name: Validate candidates
+        run: |
+          python3 scripts/validate_rules.py
+          python3 scripts/privacy_scan.py
+          python3 -m unittest discover -s tests -v
+
+      - name: Detect updates
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Create or update review branch
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B automation/rule-sync
+          git add AI.list Apple-AI.list Binance.list talkatone.list rules sources.lock.json
+          git commit -m "Sync rules from approved upstreams"
+
+          remote_ref="refs/remotes/origin/automation/rule-sync"
+          if git fetch origin "refs/heads/automation/rule-sync:$remote_ref"; then
+            expected_sha="$(git rev-parse "$remote_ref")"
+          else
+            expected_sha=""
+          fi
+          git push \
+            "--force-with-lease=refs/heads/automation/rule-sync:$expected_sha" \
+            origin HEAD:refs/heads/automation/rule-sync
+
+      - name: Open Pull Request for review
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          open_count="$(gh pr list \
+            --base main \
+            --head automation/rule-sync \
+            --state open \
+            --json number \
+            --jq 'length')"
+          if [ "$open_count" = "0" ]; then
+            gh pr create \
+              --base main \
+              --head automation/rule-sync \
+              --title "Sync rules from approved upstreams" \
+              --body "Automated candidate update from sources.json. Validation and privacy scans passed. Review rule removals, attribution, and client outputs before merging."
+          else
+            gh pr list \
+              --base main \
+              --head automation/rule-sync \
+              --state open \
+              --json url \
+              --jq '.[0].url'
+          fi
