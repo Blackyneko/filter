@@ -25,6 +25,7 @@
 - 下载结果会经过格式、规则数量、异常缩减和隐私检查。
 - 所有来源全部通过后才会更新文件；失败时保留上一版正常内容。
 - 定时同步只创建候选更新分支和 Pull Request，不直接更新 `main`。
+- 定时任务每周一 04:17 UTC（北京时间 12:17）运行，也可在 Actions 页面手动触发。
 
 本地检查：
 
@@ -36,4 +37,3 @@ python3 scripts/sync_rules.py --check
 ```
 
 来源、署名和许可证见 [SOURCES.md](SOURCES.md)，安全边界见 [SECURITY.md](SECURITY.md)。
-
