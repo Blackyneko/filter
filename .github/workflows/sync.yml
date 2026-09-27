@@ -48,7 +48,6 @@ jobs:
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Create or update review branch
         if: steps.changes.outputs.changed == 'true'
         shell: bash
@@ -95,4 +94,3 @@ jobs:
               --json url \
               --jq '.[0].url'
           fi
-

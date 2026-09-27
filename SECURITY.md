@@ -23,4 +23,3 @@ GitHub noreply 邮箱和明确记录的公开项目联系信息可以出现在 G
 ## 报告问题
 
 若发现公开文件含凭据或个人信息，请立即停止使用相关 URL，并通过 GitHub Security Advisory 私下报告。不要在公开 Issue 中粘贴秘密值。
-

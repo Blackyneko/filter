@@ -189,4 +189,3 @@ def render_for_client(text: str, source_name: str, target: str) -> str:
     )
     validate_text(rendered, f"rules/{target}/{source_name}", target=target)
     return rendered
-

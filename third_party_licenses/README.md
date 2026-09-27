@@ -8,4 +8,3 @@
 - SPDX license text: <https://spdx.org/licenses/GPL-3.0-only.html>
 
 The upstream attribution and metadata header are retained in generated copies. This directory records third-party licensing only; it does not assign a license to unrelated repository-maintained files.
-

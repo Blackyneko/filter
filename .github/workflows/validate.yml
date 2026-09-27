@@ -36,4 +36,3 @@ jobs:
 
       - name: Scan for private data and credentials
         run: python3 scripts/privacy_scan.py
-
