@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "allowed_download_hosts": [
+    "raw.githubusercontent.com"
+  ],
+  "sources": [
+    {
+      "id": "ai",
+      "mode": "remote",
+      "input": "AI.list",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list",
+      "repository": "https://github.com/fmz200/wool_scripts",
+      "authors": [
+        "lodepuly",
+        "fmz200"
+      ],
+      "license": "GPL-3.0",
+      "minimum_rules": 50,
+      "maximum_shrink_percent": 20,
+      "maximum_bytes": 1048576
+    },
+    {
+      "id": "apple-ai",
+      "mode": "local",
+      "input": "Apple-AI.list",
+      "license": "repository-maintained",
+      "minimum_rules": 20,
+      "maximum_shrink_percent": 20,
+      "maximum_bytes": 262144
+    },
+    {
+      "id": "binance",
+      "mode": "local",
+      "input": "Binance.list",
+      "license": "source-pending",
+      "minimum_rules": 10,
+      "maximum_shrink_percent": 20,
+      "maximum_bytes": 262144
+    },
+    {
+      "id": "talkatone",
+      "mode": "local",
+      "input": "talkatone.list",
+      "license": "source-pending",
+      "minimum_rules": 5,
+      "maximum_shrink_percent": 20,
+      "maximum_bytes": 262144
+    }
+  ]
+}
+

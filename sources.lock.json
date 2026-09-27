@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "ai": {
+      "sha256": "2451fa22e40e733564a5cba598757d5be3b83126ffd5cce58af893776b8cf5e4"
+    },
+    "apple-ai": {
+      "sha256": "11ba3b6ce652b206abe56963aa03ff2ece813d8daae1a47af7c911a0d3186f31"
+    },
+    "binance": {
+      "sha256": "bbf36ff46a4b2cbe220ea93fedad0638b8126a6ad5cf2f090baa58bb57357c1e"
+    },
+    "talkatone": {
+      "sha256": "6055c749f09c252e5a3ea280b39c8f228319598d8fb7de5923968584ce2fb4db"
+    }
+  }
+}
+
