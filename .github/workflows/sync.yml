@@ -55,7 +55,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B automation/rule-sync
-          git add AI.list Apple-AI.list Binance.list talkatone.list rules sources.lock.json
+          git add AI.list Apple-AI.list Binance.list rules sources.lock.json
           git commit -m "Sync rules from approved upstreams"
 
           remote_ref="refs/remotes/origin/automation/rule-sync"

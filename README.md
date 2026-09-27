@@ -9,7 +9,6 @@
 - [AI.list](https://raw.githubusercontent.com/Blackyneko/filter/main/AI.list)
 - [Apple-AI.list](https://raw.githubusercontent.com/Blackyneko/filter/main/Apple-AI.list)
 - [Binance.list](https://raw.githubusercontent.com/Blackyneko/filter/main/Binance.list)
-- [talkatone.list](https://raw.githubusercontent.com/Blackyneko/filter/main/talkatone.list)
 
 客户端专用输出位于：
 
