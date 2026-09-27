@@ -36,15 +36,6 @@
       "minimum_rules": 10,
       "maximum_shrink_percent": 20,
       "maximum_bytes": 262144
-    },
-    {
-      "id": "talkatone",
-      "mode": "local",
-      "input": "talkatone.list",
-      "license": "source-pending",
-      "minimum_rules": 5,
-      "maximum_shrink_percent": 20,
-      "maximum_bytes": 262144
     }
   ]
 }
