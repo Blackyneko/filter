@@ -28,7 +28,7 @@ ssid-trigger = "ASUS":DIRECT,"cellular":RULE,"default":RULE
 [Proxy]
 
 [Remote Proxy]
-你的订阅 = 订阅地址,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true
+你的订阅 = 订阅地址,parser-enabled = true,udp=true,block-quic=true,fast-open=default,vmess-aead=true,skip-cert-verify=false,enabled=true,flexible-sni=true
 
 [Remote Filter]
 香港节点 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|仅海外|游戏|🎮|(\b(GAME)\b))).*$"
@@ -75,26 +75,26 @@ ssid-trigger = "ASUS":DIRECT,"cellular":RULE,"default":RULE
 美国自动策略 = select,美国时延优选,美国故障转移,美国负载均衡,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 # --------------------------------
 # 自动策略
-香港时延优选 = url-test,香港节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾时延优选 = url-test,台湾节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-日本时延优选 = url-test,日本节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国时延优选 = url-test,韩国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国时延优选 = url-test,新国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-美国时延优选 = url-test,美国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+香港时延优选 = url-test,香港节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾时延优选 = url-test,台湾节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本时延优选 = url-test,日本节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国时延优选 = url-test,韩国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国时延优选 = url-test,新国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国时延优选 = url-test,美国节点,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 
-香港故障转移 = fallback,香港节点,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾故障转移 = fallback,台湾节点,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-日本故障转移 = fallback,日本节点,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国故障转移 = fallback,韩国节点,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国故障转移 = fallback,新国节点,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-美国故障转移 = fallback,美国节点,interval = 60,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+香港故障转移 = fallback,香港节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾故障转移 = fallback,台湾节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本故障转移 = fallback,日本节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国故障转移 = fallback,韩国节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国故障转移 = fallback,新国节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国故障转移 = fallback,美国节点,interval = 600,max-timeout = 2000,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 
-香港负载均衡 = load-balance,香港节点,interval = 60,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
-台湾负载均衡 = load-balance,台湾节点,interval = 60,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
-日本负载均衡 = load-balance,日本节点,interval = 60,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国负载均衡 = load-balance,韩国节点,interval = 60,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国负载均衡 = load-balance,新国节点,interval = 60,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-美国负载均衡 = load-balance,美国节点,interval = 60,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+香港负载均衡 = load-balance,香港节点,interval = 600,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾负载均衡 = load-balance,台湾节点,interval = 600,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本负载均衡 = load-balance,日本节点,interval = 600,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国负载均衡 = load-balance,韩国节点,interval = 600,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国负载均衡 = load-balance,新国节点,interval = 600,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国负载均衡 = load-balance,美国节点,interval = 600,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
 # --------------------------------
 # 兜底策略后备
 兜底后备策略 = select,香港自动场景,日本自动场景,美国自动场景,新国自动场景,台湾自动场景,韩国自动场景,香港手动场景,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
@@ -113,10 +113,9 @@ DOMAIN-SUFFIX,linkedin.com,香港自动场景
 # 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
 # 请勿修改远程CN REGION规则的排序甚至删除
 IP-CIDR,28.0.0.1/8,DIRECT
-IP-CIDR,198.18.0.1/16,DIRECT
-IP-CIDR,198.18.0.0/15,DIRECT
+IP-CIDR,198.18.0.0/15,DIRECT,no-resolve
 IP-CIDR6,fc00::/18,DIRECT
-IP-CIDR,10.1.1.0/24,DIRECT
+IP-CIDR,10.1.1.0/24,DIRECT,no-resolve
 FINAL,兜底后备策略
 
 [Remote Rule]
@@ -170,9 +169,6 @@ https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=兜底后备策略, enable
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=兜底后备策略, enabled=true
 
 [Mitm]
-ca-p12 = MIIJRQIBAzCCCQ8GCSqGSIb3DQEHAaCCCQAEggj8MIII+DCCA68GCSqGSIb3DQEHBqCCA6AwggOcAgEAMIIDlQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQI0pEI/Vxn8X8CAggAgIIDaKntM5igf6qPZfJvlkn7tZ0kFito6RQ9e0Pmq232YJzpKZtUCtLDbanvMywbYuRuYj2FXThj0h60DJgM73btvp0rx260hlgTrQuZnEYcMl9L6QXkKiEsNmhVj6Yb2vDA2U0dU+3eDNs/9iVMVUgShZfSrI/UGj0O71HfSW+0c9pxaermhfIK7Oy9uAIJ0CddfqFy6xg6EFqx7htszHrVPHNXTYKmngiCJHcE0Lyjwop+PJ0WcgP9e+8WmWk9AtUB4Y/y9MaQA7ONQmdQlZYYmFqi5Yfq0jUWZTXsH2vYnbEpR+kQVYK9HT6ajt0pHAr5179nnuZNEgtddTn0NG/MaylCc1CzLsSPpUT05Nkyz6tnBVoVOd2qzRLRxXe0mXe0PjbUtLVz13u+RlcSgMOw+VrkAF+Cnb67/P52dsR/v9aSFqOOT/+I7q+KBPYsIbl5v45mN0HVwrELh0xtlG7E0v4OmpN56u6V5VJxW8XTif0/hmPScHlQi2Hw5PKGnulOykdBiTac+ea2+rL831PkST4vOaMgVXJ35w/3IO+3lxmruWfT1PaDKEYKfftIqErZl+0fAZeFGS1hvPJ3j/H6CX4yqYFd8xMczQxsuABrqXhpeVQo8yn69h46kLt3ghju1fkPqLMZoqZXqf8iTx/nXqLOjeVxbnwighAOS8Wb0RQZZyq4lOPVLMrDrf7VPg7Kz82xWH6LdAfikATpXduG9144risOM4AoTjWu41nNb4baQlrQVNLdYDYy7PYG5/lTLhtGxW1jsLfNbIcQ0qa9ed+FQz8Sf4CnMTtCYWK2MOEIuz3bFiqbQLAp3xTMtPRP16oNO282CEz4E8HB+SyNBSNg6RuZs+9sQqYccR6Z2hgZCAmWRMWThselyD84YbhoVpt99LHlmRSxFT/Az68sTfUIQxUE4kbJEa5hWaprH5J0GiUhVqROfILKCotXrVzQq3I+9gB28wW5OLhSOAGr7D8AqVxerEfNI+wkoebhoJGdGmgxPZTUNDWJkVvpyJLLTLibNF54Z9qDE10ERIfIoRzTXqPhu/BWsbd4rYbgK0h6hlWU2vGw/qEJXY9Si/IOq2lvoFm5sqzBiAOeO6BwQkGHsPDzuyWN4xGvjnbzCa+GnFGfMifTjY7qm46s2+kDUKyuaHjE/tycMIIFQQYJKoZIhvcNAQcBoIIFMgSCBS4wggUqMIIFJgYLKoZIhvcNAQwKAQKgggTuMIIE6jAcBgoqhkiG9w0BDAEDMA4ECI93S0GGkqJjAgIIAASCBMh8zrRBntEBj6VGiQcsnK1nBbAavjnO0xpr/Q+Qq8alRPPzrwpjHHvPxB6S23OzkWa/lqmvTkQhBkhS0PizD2GGTkehHQpZlAwxT60Yq8/7wD8+9tNKrIaEHonK5p+ECrjt6eVILyGnXLtv5mxjb95qUs+3vTK5pIxXJy63oSnoGpZe5P7RjCm4KtSobJh0B9Ov8++MZiXtdeMygoM6JZGyV7QLd1TWVOi+Wm+HbwfrS5aMy1UOUtDQmPbVkzFQjfuU6NyOzGHSQf2NFN9sPcEwCDNRgwa5YwfnNMO2Z0zYrHdkRyxlVap3RgL0TnqG7e9DfovTlqMolfJyHmfPfmY7uznAsX892L081ioEETCZy4lbgJ54lXJ2qmcBZhjKLOvBqb+coCKcCB1aILLnElyxPM66CyVc05KEu8xy+NH5OB0c2BG77w/OAaECxXu/JADvzPzfKj0mgFJByg6BXa8HYn7dMXZnEZYkhpLEDIQCqEU21eyI9x8x0RaMgnqDGeLxOhzi3awkWI9rDgcOBXw2NoI+JaSmLCd5TNxOzzyRmxhMHEJ+eY29cPm3Exuv7V2bpRz1NNgGsm/UDWgqeV4kAH1G9NjtQbcF1neKTB81aTV+ggGK1qFhAW1R6M1YR7ipDR8d5q/7JUmPRTm+edOTN9LgtUGV/5ZCKMHZ4nsVCtS6OnggJlVuezc/9GUQm2U6Q9KEFwG9Ua6AkU94pARt2v+4QRHooh29lvEhCvUk9kGKgsO+zQnkvq4Q0US50XAzEz8fizL/HRe1DaxIFzLy9QYqSySZz05uPc2IdFZIRr+NKTBDkTPFzu9XPWISrvL+X/Siw1+szo7COCZKnjVcNzLRqoHfKUb93tBDSyPN5zEVSOxbOYJzZaRCoHtEeVMwqdPbYwhxZmUlHXPhJfD1tV/5AXhzP/9vYhZovG7lSxb21scEFT6QL7m0Hc/wRD3lKdOts39HvBaz/A6LAI3VPHre/AhkIt6XUXUBBPxiewvq9wyTNSWKqi56CvP1inZItRXXJmby093AelolaAa1eNBN5zxPyjYDUFM3frQFN+945b+mjBY9miywa1b8nPKnDE84zv+krIl2h+VvQPc2HuNk+vA4V0g/6T5ehnV/+phXQqBvmuoav+EcQrezw063tiPyrgfuUL/N/Ky9G9Og9OeaKAlTz4ixp5mwAKCqvFbLaNcYHWRZoV5FUxO28Rf8YGOYmKUXyP/BbsxLTXVpcTClZ7q8D9HeFl/SWVVE6pS6VL8V/E27L4bsLAFH1WrnCo4cmYxfPC4h6faybrEJzRSxxupHBWIzJ0erg2a+XYxPW1oHMvZ/Ia4BnbGLYOSW2wbL9jqWXTiNZsadlYFroOr4RfulGOqi+C8qUAMmHyWUMke57njHXRi4sWJgoMW1LHEP9z5N37r+0WBMcRRFmqdzMA2HVd1Ks8OkHvxH4Tnpwdtyf5tjiF7MATU8oXzfJiip2YrmBzW48TEjKd+zQZGzdCnBhDhxzQ3U9LLfTk3HebcbxeaBX/9ts/7+7ITxX4z5OqGVsQWTlcHUEhQHy/LNRHUi6ZaeH2CwC1F5QFqEh4XP7o4DTdMuVxLRdHqNSIXLJL3WXACDioc57qrCz44wH7QdVBMxJTAjBgkqhkiG9w0BCRUxFgQUq+pZ/JLGcpQQg1okRQDusVwA1AowLTAhMAkGBSsOAwIaBQAEFDfuPlllVSaUaFQ9VjGEC4AVCIyMBAiVwvBQU5gBpw==
-ca-passphrase = P18E0405
+# MITM 证书仅在 Loon 本地管理，禁止将证书和口令提交到仓库。
 hostname =
-ca-p12 = 
-ca-passphrase = 
 skip-server-cert-verify = false
