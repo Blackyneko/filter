@@ -17,8 +17,9 @@ DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,apple-relay.akamaized.net
 DOMAIN-SUFFIX,cp4.cloudflare.com
 
-# 2) Siri 语音（实测：siri.apple.com 必须走代理，直连会导致 Siri AI 不工作）
+# 2) Siri 语音（实测：以下必须走代理，直连会导致 Siri AI 不工作）
 DOMAIN-SUFFIX,siri.apple.com
+DOMAIN,guzzoni.smoot.apple.com
 
 # 3) ChatGPT / OpenAI
 DOMAIN-SUFFIX,openai.com
