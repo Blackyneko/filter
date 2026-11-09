@@ -1,0 +1,22 @@
+#!name=【验证用】Apple 智能中继 + OpenAI → 美国自动策略
+#!desc=验证网上流传"Apple 智能资格校验/私密中继 + OpenAI 固定走美国节点"。引用时必须给 美国自动策略。
+#!category=Apple
+#############################################
+# 用法（Loon [Remote Rule] 里加一行，务必带 ,美国自动策略）：
+#   https://raw.githubusercontent.com/Blackyneko/filter/main/Verify-AppleUS.list,美国自动策略
+#
+# 注意：远程订阅整表只用引用时的统一 policy，文件内不写行内 policy。
+# 本表统一走 美国自动策略（须是你 Loon 里真实存在且连通的策略组名）。
+#############################################
+
+# 1) Apple 智能资格校验 + 私密云计算中继(Relay/PCC)
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.akamaized.net
+DOMAIN-SUFFIX,cp4.cloudflare.com
+
+# 2) ChatGPT / OpenAI
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
