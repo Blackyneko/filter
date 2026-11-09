@@ -1,0 +1,18 @@
+#!name=【验证用】Siri 核心语音 → 直连
+#!desc=验证网上流传"把 Siri 语音域名设为直连可防普通话 Siri 报错"。引用时必须给 DIRECT。
+#!category=Apple
+#############################################
+# 用法（Loon [Remote Rule] 里加一行，务必带 ,DIRECT）：
+#   https://raw.githubusercontent.com/Blackyneko/filter/main/Verify-SiriDirect.list,DIRECT
+#
+# 注意：远程订阅整表只用引用时的统一 policy，文件内不写行内 policy。
+# 本表只放 Siri 语音域名，统一走 DIRECT。
+# 验证完请移除，勿与主 Apple-AI.list（这些域名走 PROXY）同时引用，方向相反会打架。
+#############################################
+
+# 1) Siri 核心语音交互 —— 直连
+DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN-SUFFIX,siri.apple.com
+DOMAIN,dejavu.apple.com
+DOMAIN,sequoia.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
