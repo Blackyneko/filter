@@ -7,8 +7,7 @@
 #      （把 policy=PROXY 改成你真实的策略组名）
 #   2) 必须放在 GEOIP,CN / GEOSITE,cn → DIRECT 之前的靠前位置。
 #   3) guzzoni.apple.com 是 Siri 命门；aaplimg.com 为整后缀，覆盖大量 *.v.aaplimg.com 子域。
-#   4) siri.apple.com 必须走代理（实测：设直连会导致 Siri AI 不工作）。
-# 更新：2026-11-10
+# 更新：2026-11-01
 #############################################
 
 # ---- 1) Siri 主入口 ----
@@ -18,7 +17,6 @@ DOMAIN,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,guzzoni-smoot.v.aaplimg.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,siri.apple.com
 DOMAIN-KEYWORD,siri
 
 # ---- 2) Apple Intelligence 后端 / 私有中继(Relay) / PCC ----
