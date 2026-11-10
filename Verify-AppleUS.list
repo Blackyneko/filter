@@ -23,6 +23,7 @@ DOMAIN-SUFFIX,cp4.cloudflare.com
 
 # 2) Siri 语音/视觉搜索（实测：以下必须走代理，直连会导致 Siri AI 不工作）
 DOMAIN-SUFFIX,siri.apple.com
+DOMAIN,api-siri-prod.apple.com
 DOMAIN,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,gs-loc-cn.apple.com
 
