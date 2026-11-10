@@ -17,7 +17,9 @@ DOMAIN,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,guzzoni-smoot.v.aaplimg.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-KEYWORD,siri
+DOMAIN-SUFFIX,siri.apple.com
+DOMAIN,api-siri-prod.apple.com
+#DOMAIN-KEYWORD,siri
 
 # ---- 2) Apple Intelligence 后端 / 私有中继(Relay) / PCC ----
 DOMAIN-SUFFIX,mask.apple-dns.net
