@@ -1,0 +1,21 @@
+#!name=iCloud 内容 CDN 分流
+#!desc=iCloud 内容分发/存储 CDN（照片/文件/CloudKit/媒体）。默认走直连；如果你需要让它走代理，把引用时的 policy 改成代理组即可。
+#!category=Apple
+#############################################
+# 用法（Loon [Remote Rule] 加一行）：
+#   默认直连： https://raw.githubusercontent.com/Blackyneko/filter/main/iCloud-Content.list,DIRECT
+#   需要代理： .../iCloud-Content.list,美国自动策略   （或你的代理组名）
+#
+# 说明：
+#  1) *.icloud-content.com 是 iCloud 内容 CDN（edge-*.region 边缘节点 / cvws / cdn / media 等），
+#     Apple iCloud 照片、iCloud Drive、CloudKit App 数据、媒体资源走这里。非 Siri AI，属大流量 CDN。
+#  2) 美区 ID 场景：默认直连可省大量代理带宽；若发现照片/CloudKit 在直连下异常或变慢，
+#     把引用改为代理组即可，无需改本文件。
+#  3) p114-content.icloud.com 为特定内容端点（精确匹配）。
+#############################################
+
+# 1) iCloud 内容 CDN（整后缀，含 edge/cvws/cdn/media 等子域）
+DOMAIN-SUFFIX,icloud-content.com
+
+# 2) 特定内容端点
+DOMAIN,p114-content.icloud.com
