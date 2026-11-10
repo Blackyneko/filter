@@ -1,0 +1,23 @@
+#!name=【验证用】直连候选 - 找出可免代理的 Apple 域名
+#!desc=验证哪些 Apple 域名可以直连（省代理、降低降速）。引用时必须给 DIRECT。命门/PCC域名不含在内。
+#!category=Apple
+#############################################
+# 目的：把高概率可直连的 CDN/资源类域名设为直连，减少无谓代理、降低降速。
+# 用法（Loon [Remote Rule] 加一行，务必带 ,DIRECT）：
+#   https://raw.githubusercontent.com/Blackyneko/filter/main/Verify-DirectCandidate.list,DIRECT
+#
+# 注意：
+#  1) 本表域名会被强制走 DIRECT（不会回退代理），若某域名直连不通会直接失败——这正是验证方式。
+#  2) 不含 Siri 命门(guzzoni/siri)与 PCC 中继(mask/apple-relay/gateway/cp4)，那些保持走代理。
+#  3) 验证方法：逐个确认相关功能是否正常（App Store 图片/下载、定位、Siri 等），正常则可固化为直连。
+#############################################
+
+# 1) App Store 资源 CDN
+DOMAIN-SUFFIX,apps.mzstatic.com
+
+# 2) 图片 CDN（量大，直连可能更快）
+DOMAIN-SUFFIX,aaplimg.com
+
+# 3) 定位服务
+DOMAIN-SUFFIX,ls.apple.com
+DOMAIN,gspe1-ssl.ls.apple.com
