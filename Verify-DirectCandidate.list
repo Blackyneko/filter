@@ -24,6 +24,8 @@ DOMAIN,gspe1-ssl.ls.apple.com
 
 # 4) iCloud Private Relay 检测域名（实测可直连，属隐私中继非Siri AI）
 DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask-api.icloud.com
 
 # 5) iCloud 遥测/指标上报（纯诊断数据，不影响Siri AI，直连省代理）
 DOMAIN-SUFFIX,metrics.icloud.com
