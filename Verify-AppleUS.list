@@ -10,7 +10,6 @@
 #############################################
 
 # 1) Apple 智能资格校验 + 私密云计算中继(Relay/PCC)
-DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
