@@ -12,6 +12,9 @@
 # 1) Apple 智能资格校验 + 私密云计算中继(Relay/PCC)
 # gateway.icloud.com 为鉴权型：首次鉴权必须代理(校验IP是否支持地区)，之后短暂可直连；因流量小且Loon无法做"首次代理后直连"，固定走代理最稳。
 DOMAIN,gateway.icloud.com
+DOMAIN-SUFFIX,mask.apple-dns.net
+DOMAIN-SUFFIX,mask-api.fe.apple-dns.net
+DOMAIN-SUFFIX,mask-t.apple-dns.net
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
