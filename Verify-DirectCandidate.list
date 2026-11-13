@@ -19,8 +19,8 @@ DOMAIN-SUFFIX,apps.mzstatic.com
 DOMAIN-SUFFIX,aaplimg.com
 
 # 3) 定位服务
-DOMAIN-SUFFIX,ls.apple.com
-DOMAIN,gspe1-ssl.ls.apple.com
+#DOMAIN-SUFFIX,ls.apple.com  # 改走代理: Siri中ChatGPT扩展区域判定需要
+#DOMAIN,gspe1-ssl.ls.apple.com  # 改走代理: 区域判定
 
 # 4) iCloud Private Relay 检测域名（实测可直连，属隐私中继非Siri AI）
 DOMAIN-SUFFIX,mask.icloud.com
