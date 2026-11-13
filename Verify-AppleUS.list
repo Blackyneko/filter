@@ -33,3 +33,7 @@ DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
+
+# 4) ChatGPT 扩展区域判定/定位（关键：缺失会报"所在区域不支持"）
+DOMAIN,p113-acsegateway.icloud.com
+DOMAIN,gspe1-ssl.ls.apple.com
