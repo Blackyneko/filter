@@ -33,15 +33,3 @@ DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
-
-# 4) 区域判定 / 定位（关键：Siri 内 ChatGPT 扩展区域校验，缺失会报"所在区域不支持"）
-DOMAIN-SUFFIX,lcdn-locator.apple.com
-DOMAIN-SUFFIX,lcdn.apple.com
-
-# 5) OpenAI / ChatGPT 补充（Siri+ChatGPT 扩展鉴权 / CDN / 实时语音）
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,openai.org
-DOMAIN-SUFFIX,oaistatsig.com
-DOMAIN-SUFFIX,chatgpt.site
-DOMAIN-SUFFIX,livekit.cloud
-DOMAIN,openai.com.cdn.cloudflare.net
