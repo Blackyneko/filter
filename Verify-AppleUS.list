@@ -30,3 +30,6 @@ DOMAIN-SUFFIX,gs-loc-cn.apple.com
 # 3) ChatGPT / OpenAI
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
