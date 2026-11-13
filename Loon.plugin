@@ -1,0 +1,60 @@
+#!name = AppleFlow · Apple 智能与中文 Siri 分流
+#!desc = 零 MitM 极简分流：保障中文 Siri 与普通话来电筛选真实 IP 直连，将 Apple Intelligence PCC 与 ChatGPT/视觉智能置顶分流至美区策略组。
+#!openUrl = https://kianuni.github.io/AppleFlow/
+#!author = Kianuni[https://github.com/Kianuni/AppleFlow]
+#!homepage = https://github.com/Kianuni/AppleFlow
+#!select = 美国自动场景, 台湾自动场景
+#!system = ios, ipados, macos
+#!version = 1.0.0
+
+[General]
+skip-proxy = guzzoni.apple.com
+real-ip = guzzoni.apple.com, *.guzzoni.apple.com, *.siri.apple.com, dejavu.apple.com, sequoia.apple.com, *.smoot.apple.com, *.push.apple.com
+
+[Rule]
+# 1. 中文 Siri 与普通话来电筛选直连
+DOMAIN-SUFFIX, guzzoni.apple.com, DIRECT
+DOMAIN-SUFFIX, siri.apple.com, DIRECT
+DOMAIN, dejavu.apple.com, DIRECT
+DOMAIN, sequoia.apple.com, DIRECT
+DOMAIN-SUFFIX, smoot.apple.com, DIRECT
+
+# 2. Apple Intelligence PCC 隐私云计算与区域准入
+DOMAIN, gspe1-ssl.ls.apple.com, 美国自动场景
+DOMAIN-SUFFIX, issuer.apple.com, 美国自动场景
+DOMAIN-SUFFIX, ropes.apple.com, 美国自动场景
+DOMAIN, mask-api.icloud.com, 美国自动场景
+DOMAIN, mask.icloud.com, 美国自动场景
+DOMAIN, mask-h2.icloud.com, 美国自动场景
+DOMAIN, ss-cleanup-proxy-prod.us-east-1m.app.apple.com, 美国自动场景
+DOMAIN-SUFFIX, app.apple.com, 美国自动场景
+DOMAIN-SUFFIX, apple-relay.apple.com, 美国自动场景
+DOMAIN-SUFFIX, apple-relay.cloudflare.com, 美国自动场景
+DOMAIN-SUFFIX, apple-relay.fastly-edge.com, 美国自动场景
+DOMAIN-SUFFIX, apple-relay.akamaized.net, 美国自动场景
+DOMAIN-SUFFIX, cp4.cloudflare.com, 美国自动场景
+
+# 3. Siri ChatGPT 扩展与视觉智能
+DOMAIN-SUFFIX, openai.com, 美国自动场景
+DOMAIN-SUFFIX, chatgpt.com, 美国自动场景
+DOMAIN-SUFFIX, oaistatic.com, 美国自动场景
+DOMAIN-SUFFIX, oaiusercontent.com, 美国自动场景
+DOMAIN, openai-api.arkoselabs.com, 美国自动场景
+DOMAIN-SUFFIX, googleapis.com, 美国自动场景
+DOMAIN-SUFFIX, gstatic.com, 美国自动场景
+DOMAIN, lens.google.com, 美国自动场景
+DOMAIN-SUFFIX, anthropic.com, 美国自动场景
+DOMAIN-SUFFIX, claude.ai, 美国自动场景
+
+DOMAIN,identity.apple.com // Apple ID 设备身份认证直连
+DOMAIN-SUFFIX,push.apple.com // APNs 系统推送通知直连
+DOMAIN-KEYWORD,apple.com.edgekey.net // Apple Akamai 边缘直连
+IP-CIDR,17.249.0.0/16,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.252.0.0/16,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.57.144.0/22,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.188.128.0/18,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.188.20.0/23,no-resolve // Apple APNs IPv4 号段
+IP-CIDR6,2403:300:a42::/48,no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2403:300:a51::/48,no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2620:149:a44::/48,no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2a01:b740:a42::/48,no-resolve // Apple APNs IPv6 号段
