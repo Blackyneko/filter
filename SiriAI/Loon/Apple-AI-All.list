@@ -1,0 +1,41 @@
+# AppleFlow — All-in-One Apple Intelligence & Extensions (PCC + ChatGPT + Lens + Claude)
+# Version: 1.0.1
+
+DOMAIN,gspe1-ssl.ls.apple.com // Apple 智能区域与定位准入校验（iOS 27.2+ 严禁开启 MitM）
+DOMAIN-SUFFIX,issuer.apple.com // PCC 盲签名令牌签发（inference / waitlist，严禁直连泄漏 CN IP）
+DOMAIN-SUFFIX,ropes.apple.com // PCC ROPES 隐私推理传输网关
+DOMAIN,mask-api.icloud.com // PCC / 专用代理匿名令牌签发
+DOMAIN,mask.icloud.com // PCC OHTTP 盲化网关
+DOMAIN,mask-h2.icloud.com // PCC OHTTP HTTP/2 回退网关
+DOMAIN,ss-cleanup-proxy-prod.us-east-1m.app.apple.com // 相册高质量消除云端推理专用节点
+DOMAIN-SUFFIX,app.apple.com // 相册高质量消除与生成式云端服务接口
+DOMAIN-SUFFIX,apple-relay.apple.com // Apple 智能 PCC 隐私云计算中继（请勿拦截 UDP 443 / QUIC）
+DOMAIN-SUFFIX,apple-relay.cloudflare.com // PCC Cloudflare OHTTP 中继
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com // PCC Fastly OHTTP 中继
+DOMAIN-SUFFIX,apple-relay.akamaized.net // PCC Akamai OHTTP 中继
+DOMAIN-SUFFIX,cp4.cloudflare.com // Apple 隐私中继辅助端点
+DOMAIN-SUFFIX,openai.com // Siri ChatGPT 扩展核心接口
+DOMAIN-SUFFIX,chatgpt.com // Siri ChatGPT 扩展与账户登录
+DOMAIN-SUFFIX,chat.com // ChatGPT 官方短域名
+DOMAIN-SUFFIX,sora.com // OpenAI Sora 视频生成服务
+DOMAIN-SUFFIX,oaistatic.com // OpenAI 静态资源
+DOMAIN-SUFFIX,oaiusercontent.com // ChatGPT 生图与多模态附件
+DOMAIN-SUFFIX,oaistatsig.com // OpenAI 客户端特性开关校验
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net // OpenAI Cloudflare 边缘加速
+DOMAIN,openai-api.arkoselabs.com // OpenAI 安全校验
+DOMAIN-SUFFIX,chatgpt.livekit.cloud // ChatGPT 高级实时语音 WebRTC 信令
+DOMAIN-SUFFIX,host.livekit.cloud // ChatGPT 高级实时语音媒体节点
+DOMAIN-SUFFIX,turn.livekit.cloud // ChatGPT 高级实时语音 TURN 中继
+DOMAIN,lens.google.com // 视觉智能 Google Lens 识图入口
+DOMAIN-SUFFIX,gemini.google.com // Google Gemini 网页与客户端
+DOMAIN,gemini.gstatic.com // Google Gemini 专用静态资源
+DOMAIN,generativelanguage.googleapis.com // Google Gemini 生成式 API
+DOMAIN,proactivebackend-pa.googleapis.com // Google Gemini App 后端接口
+DOMAIN,robinfrontend-pa.googleapis.com // Google Gemini 助手前端接口
+DOMAIN,aistudio.google.com // Google AI Studio 开发台
+DOMAIN,alkalimakersuite-pa.clients6.google.com // Google AI Studio 核心接口
+DOMAIN-SUFFIX,deepmind.google // Google DeepMind 服务
+DOMAIN-SUFFIX,anthropic.com // Claude / Xcode Intelligence 扩展
+DOMAIN-SUFFIX,claude.ai // Claude AI 服务
+DOMAIN-SUFFIX,claude.com // Claude 官方主域
+DOMAIN-SUFFIX,claudeusercontent.com // Claude Artifacts 预览沙盒与附件渲染
