@@ -1,0 +1,9 @@
+# Siri & Mandarin Call Screening Direct Rules
+# 必须置于代理规则与 Apple 兜底规则之前，并配合 skip-proxy + always-real-ip 使用
+# Version: 1.0.1
+
+DOMAIN-SUFFIX,guzzoni.apple.com // Siri & 普通话来电筛选核心语音网关（严禁代理或 Fake-IP）
+DOMAIN-SUFFIX,siri.apple.com // Siri 语音服务域名
+DOMAIN,dejavu.apple.com // Siri 语音识别辅助服务
+DOMAIN,sequoia.apple.com // Siri 自然语言服务
+DOMAIN-SUFFIX,smoot.apple.com // Spotlight / Siri 搜索建议（切勿开启旧版 MitM）
