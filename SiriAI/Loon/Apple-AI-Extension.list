@@ -1,0 +1,29 @@
+# Siri ChatGPT Extension & Visual Intelligence
+# Siri 外部大模型扩展与相机视觉智能 Google 识图接口
+# Version: 1.0.1
+
+DOMAIN-SUFFIX,openai.com // Siri ChatGPT 扩展核心接口
+DOMAIN-SUFFIX,chatgpt.com // Siri ChatGPT 扩展与账户登录
+DOMAIN-SUFFIX,chat.com // ChatGPT 官方短域名
+DOMAIN-SUFFIX,sora.com // OpenAI Sora 视频生成服务
+DOMAIN-SUFFIX,oaistatic.com // OpenAI 静态资源
+DOMAIN-SUFFIX,oaiusercontent.com // ChatGPT 生图与多模态附件
+DOMAIN-SUFFIX,oaistatsig.com // OpenAI 客户端特性开关校验
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net // OpenAI Cloudflare 边缘加速
+DOMAIN,openai-api.arkoselabs.com // OpenAI 安全校验
+DOMAIN-SUFFIX,chatgpt.livekit.cloud // ChatGPT 高级实时语音 WebRTC 信令
+DOMAIN-SUFFIX,host.livekit.cloud // ChatGPT 高级实时语音媒体节点
+DOMAIN-SUFFIX,turn.livekit.cloud // ChatGPT 高级实时语音 TURN 中继
+DOMAIN,lens.google.com // 视觉智能 Google Lens 识图入口
+DOMAIN-SUFFIX,gemini.google.com // Google Gemini 网页与客户端
+DOMAIN,gemini.gstatic.com // Google Gemini 专用静态资源
+DOMAIN,generativelanguage.googleapis.com // Google Gemini 生成式 API
+DOMAIN,proactivebackend-pa.googleapis.com // Google Gemini App 后端接口
+DOMAIN,robinfrontend-pa.googleapis.com // Google Gemini 助手前端接口
+DOMAIN,aistudio.google.com // Google AI Studio 开发台
+DOMAIN,alkalimakersuite-pa.clients6.google.com // Google AI Studio 核心接口
+DOMAIN-SUFFIX,deepmind.google // Google DeepMind 服务
+DOMAIN-SUFFIX,anthropic.com // Claude / Xcode Intelligence 扩展
+DOMAIN-SUFFIX,claude.ai // Claude AI 服务
+DOMAIN-SUFFIX,claude.com // Claude 官方主域
+DOMAIN-SUFFIX,claudeusercontent.com // Claude Artifacts 预览沙盒与附件渲染
