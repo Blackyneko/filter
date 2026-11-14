@@ -4,14 +4,14 @@
 #!author = BlackyNeko
 #!homepage = https://
 #!system = iOS 27+
-#!version = 1.0.0
+#!version = 1.0.1
 
 [General]
 skip-proxy = guzzoni.apple.com
 real-ip = guzzoni.apple.com, *.guzzoni.apple.com, *.siri.apple.com, dejavu.apple.com, sequoia.apple.com, *.smoot.apple.com, *.push.apple.com
 
 [Rule]
-# 1. Siri 与普通话来电筛选
+# 1. 中文 Siri 
 DOMAIN-SUFFIX, guzzoni.apple.com, DIRECT
 DOMAIN-SUFFIX, siri.apple.com, DIRECT
 DOMAIN, dejavu.apple.com, DIRECT
@@ -19,42 +19,43 @@ DOMAIN, sequoia.apple.com, DIRECT
 DOMAIN-SUFFIX, smoot.apple.com, DIRECT
 
 # 2. Apple Intelligence PCC 隐私云计算与区域准入
-DOMAIN, gspe1-ssl.ls.apple.com, 美国自动场景
-DOMAIN-SUFFIX, issuer.apple.com, 美国自动场景
-DOMAIN-SUFFIX, ropes.apple.com, 美国自动场景
-DOMAIN, mask-api.icloud.com, 美国自动场景
-DOMAIN, mask.icloud.com, 美国自动场景
-DOMAIN, mask-h2.icloud.com, 美国自动场景
-DOMAIN, ss-cleanup-proxy-prod.us-east-1m.app.apple.com, 美国自动场景
-DOMAIN-SUFFIX, app.apple.com, 美国自动场景
-DOMAIN-SUFFIX, apple-relay.apple.com, 美国自动场景
-DOMAIN-SUFFIX, apple-relay.cloudflare.com, 美国自动场景
-DOMAIN-SUFFIX, apple-relay.fastly-edge.com, 美国自动场景
-DOMAIN-SUFFIX, apple-relay.akamaized.net, 美国自动场景
-DOMAIN-SUFFIX, cp4.cloudflare.com, 美国自动场景
+DOMAIN, gspe1-ssl.ls.apple.com, 美国自动策略
+DOMAIN-SUFFIX, issuer.apple.com, 美国自动策略
+DOMAIN-SUFFIX, ropes.apple.com, 美国自动策略
+DOMAIN, mask-api.icloud.com, 美国自动策略
+DOMAIN, mask.icloud.com, 美国自动策略
+DOMAIN, mask-h2.icloud.com, 美国自动策略
+DOMAIN, ss-cleanup-proxy-prod.us-east-1m.app.apple.com, 美国自动策略
+DOMAIN-SUFFIX, app.apple.com, 美国自动策略
+DOMAIN-SUFFIX, apple-relay.apple.com, 美国自动策略
+DOMAIN-SUFFIX, apple-relay.cloudflare.com, 美国自动策略
+DOMAIN-SUFFIX, apple-relay.fastly-edge.com, 美国自动策略
+DOMAIN-SUFFIX, apple-relay.akamaized.net, 美国自动策略
+DOMAIN-SUFFIX, cp4.cloudflare.com, 美国自动策略
 
 # 3. Siri ChatGPT 扩展与视觉智能
-DOMAIN-SUFFIX, openai.com, 美国自动场景
-DOMAIN-SUFFIX, chatgpt.com, 美国自动场景
-DOMAIN-SUFFIX, oaistatic.com, 美国自动场景
-DOMAIN-SUFFIX, oaiusercontent.com, 美国自动场景
-DOMAIN, openai-api.arkoselabs.com, 美国自动场景
-DOMAIN-SUFFIX, googleapis.com, 美国自动场景
-DOMAIN-SUFFIX, gstatic.com, 美国自动场景
-DOMAIN, lens.google.com, 美国自动场景
-DOMAIN-SUFFIX, anthropic.com, 美国自动场景
-DOMAIN-SUFFIX, claude.ai, 美国自动场景
-
-#4. Apple-APNs-Direct
-DOMAIN,identity.apple.com, DIRECT // Apple ID 设备身份认证直连
-DOMAIN-SUFFIX,push.apple.com, DIRECT // APNs 系统推送通知直连
-DOMAIN-KEYWORD,apple.com.edgekey.net, DIRECT // Apple Akamai 边缘直连
-IP-CIDR,17.249.0.0/16, DIRECT, no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.252.0.0/16, DIRECT, no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.57.144.0/22, DIRECT, no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.188.128.0/18, DIRECT, no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.188.20.0/23, DIRECT, no-resolve // Apple APNs IPv4 号段
-IP-CIDR6,2403:300:a42::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
-IP-CIDR6,2403:300:a51::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
-IP-CIDR6,2620:149:a44::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
-IP-CIDR6,2a01:b740:a42::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
+DOMAIN-SUFFIX, openai.com, 美国自动策略
+DOMAIN-SUFFIX, chatgpt.com, 美国自动策略
+DOMAIN-SUFFIX, chat.com, 美国自动策略
+DOMAIN-SUFFIX, sora.com, 美国自动策略
+DOMAIN-SUFFIX, oaistatic.com, 美国自动策略
+DOMAIN-SUFFIX, oaiusercontent.com, 美国自动策略
+DOMAIN-SUFFIX, oaistatsig.com, 美国自动策略
+DOMAIN-SUFFIX, openai.com.cdn.cloudflare.net, 美国自动策略
+DOMAIN, openai-api.arkoselabs.com, 美国自动策略
+DOMAIN-SUFFIX, chatgpt.livekit.cloud, 美国自动策略
+DOMAIN-SUFFIX, host.livekit.cloud, 美国自动策略
+DOMAIN-SUFFIX, turn.livekit.cloud, 美国自动策略
+DOMAIN, lens.google.com, 美国自动策略
+DOMAIN-SUFFIX, gemini.google.com, 美国自动策略
+DOMAIN, gemini.gstatic.com, 美国自动策略
+DOMAIN, generativelanguage.googleapis.com, 美国自动策略
+DOMAIN, proactivebackend-pa.googleapis.com, 美国自动策略
+DOMAIN, robinfrontend-pa.googleapis.com, 美国自动策略
+DOMAIN, aistudio.google.com, 美国自动策略
+DOMAIN, alkalimakersuite-pa.clients6.google.com, 美国自动策略
+DOMAIN-SUFFIX, deepmind.google, 美国自动策略
+DOMAIN-SUFFIX, anthropic.com, 美国自动策略
+DOMAIN-SUFFIX, claude.ai, 美国自动策略
+DOMAIN-SUFFIX, claude.com, 美国自动策略
+DOMAIN-SUFFIX, claudeusercontent.com, 美国自动策略
