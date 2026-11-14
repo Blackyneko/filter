@@ -1,9 +1,9 @@
-#!name = AppleFlow · Apple 智能与中文 Siri 分流
-#!desc = 零 MitM 极简分流：保障中文 Siri 与普通话来电筛选真实 IP 直连，将 Apple Intelligence PCC 与 ChatGPT/视觉智能置顶分流至美区策略组。
-#!openUrl = https://kianuni.github.io/AppleFlow/
-#!author = Kianuni[https://github.com/Kianuni/AppleFlow]
-#!homepage = https://github.com/Kianuni/AppleFlow
-#!system = ios, ipados, macos
+#!name = Sir AI 分流插件 for Loon
+#!desc = 将 Apple Intelligence PCC 与 ChatGPT/视觉智能置顶分流至美区策略组。
+#!openUrl = https://
+#!author = BlackyNeko
+#!homepage = https://
+#!system = iOS 27+
 #!version = 1.0.0
 
 [General]
@@ -11,7 +11,7 @@ skip-proxy = guzzoni.apple.com
 real-ip = guzzoni.apple.com, *.guzzoni.apple.com, *.siri.apple.com, dejavu.apple.com, sequoia.apple.com, *.smoot.apple.com, *.push.apple.com
 
 [Rule]
-# 1. 中文 Siri 与普通话来电筛选直连
+# 1. Siri 与普通话来电筛选
 DOMAIN-SUFFIX, guzzoni.apple.com, DIRECT
 DOMAIN-SUFFIX, siri.apple.com, DIRECT
 DOMAIN, dejavu.apple.com, DIRECT
@@ -45,15 +45,16 @@ DOMAIN, lens.google.com, 美国自动场景
 DOMAIN-SUFFIX, anthropic.com, 美国自动场景
 DOMAIN-SUFFIX, claude.ai, 美国自动场景
 
-DOMAIN,identity.apple.com // Apple ID 设备身份认证直连
-DOMAIN-SUFFIX,push.apple.com // APNs 系统推送通知直连
-DOMAIN-KEYWORD,apple.com.edgekey.net // Apple Akamai 边缘直连
-IP-CIDR,17.249.0.0/16,no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.252.0.0/16,no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.57.144.0/22,no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.188.128.0/18,no-resolve // Apple APNs IPv4 号段
-IP-CIDR,17.188.20.0/23,no-resolve // Apple APNs IPv4 号段
-IP-CIDR6,2403:300:a42::/48,no-resolve // Apple APNs IPv6 号段
-IP-CIDR6,2403:300:a51::/48,no-resolve // Apple APNs IPv6 号段
-IP-CIDR6,2620:149:a44::/48,no-resolve // Apple APNs IPv6 号段
-IP-CIDR6,2a01:b740:a42::/48,no-resolve // Apple APNs IPv6 号段
+#4. Apple-APNs-Direct
+DOMAIN,identity.apple.com, DIRECT // Apple ID 设备身份认证直连
+DOMAIN-SUFFIX,push.apple.com, DIRECT // APNs 系统推送通知直连
+DOMAIN-KEYWORD,apple.com.edgekey.net, DIRECT // Apple Akamai 边缘直连
+IP-CIDR,17.249.0.0/16, DIRECT, no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.252.0.0/16, DIRECT, no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.57.144.0/22, DIRECT, no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.188.128.0/18, DIRECT, no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.188.20.0/23, DIRECT, no-resolve // Apple APNs IPv4 号段
+IP-CIDR6,2403:300:a42::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2403:300:a51::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2620:149:a44::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2a01:b740:a42::/48, DIRECT, no-resolve // Apple APNs IPv6 号段
