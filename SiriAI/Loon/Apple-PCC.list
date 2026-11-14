@@ -1,0 +1,17 @@
+# Apple Intelligence Private Cloud Compute (PCC)
+# 必须置于 Apple_All / icloud.com 直连规则之前，走支持 UDP/QUIC 的低延迟美区策略组
+# Version: 1.0.1
+
+DOMAIN,gspe1-ssl.ls.apple.com // Apple 智能区域与定位准入校验（iOS 27.2+ 严禁开启 MitM）
+DOMAIN-SUFFIX,issuer.apple.com // PCC 盲签名令牌签发（inference / waitlist，严禁直连泄漏 CN IP）
+DOMAIN-SUFFIX,ropes.apple.com // PCC ROPES 隐私推理传输网关
+DOMAIN,mask-api.icloud.com // PCC / 专用代理匿名令牌签发
+DOMAIN,mask.icloud.com // PCC OHTTP 盲化网关
+DOMAIN,mask-h2.icloud.com // PCC OHTTP HTTP/2 回退网关
+DOMAIN,ss-cleanup-proxy-prod.us-east-1m.app.apple.com // 相册高质量消除云端推理专用节点
+DOMAIN-SUFFIX,app.apple.com // 相册高质量消除与生成式云端服务接口
+DOMAIN-SUFFIX,apple-relay.apple.com // Apple 智能 PCC 隐私云计算中继（请勿拦截 UDP 443 / QUIC）
+DOMAIN-SUFFIX,apple-relay.cloudflare.com // PCC Cloudflare OHTTP 中继
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com // PCC Fastly OHTTP 中继
+DOMAIN-SUFFIX,apple-relay.akamaized.net // PCC Akamai OHTTP 中继
+DOMAIN-SUFFIX,cp4.cloudflare.com // Apple 隐私中继辅助端点
