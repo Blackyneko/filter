@@ -1,0 +1,62 @@
+#!name= Siri AI 分流 for Loon
+#!desc= 将 Apple Intelligence PCC 与 ChatGPT/视觉智能置顶分流至美区策略组。安装后必须在插件配置里把 PROXY 指向美区策略组，否则会 fallback 到全局第一个节点。需要 iOS 27+。
+#!author= BlackyNeko
+#!homepage= https://example.com/replace-with-your-repo
+#!icon= https://example.com/replace-with-icon.png
+#!date= 2026-11-14
+
+[General]
+# Siri 语音链路返回真实 IP，避免 FakeIP 被系统缓存后、关掉 Loon 时 Siri 哑掉
+real-ip = guzzoni.apple.com,*.guzzoni.apple.com,*.siri.apple.com,dejavu.apple.com,sequoia.apple.com,*.smoot.apple.com,*.push.apple.com
+
+[rule]
+# PROXY 是"用户在插件配置里选中的策略组"占位符，插件内不能写具体组名
+# 插件规则优先级低于本地规则，装完请到请求日志确认命中来源
+
+# 1. 中文 Siri
+DOMAIN-SUFFIX,guzzoni.apple.com,DIRECT
+DOMAIN-SUFFIX,siri.apple.com,DIRECT
+DOMAIN,dejavu.apple.com,DIRECT
+DOMAIN,sequoia.apple.com,DIRECT
+DOMAIN-SUFFIX,smoot.apple.com,DIRECT
+
+# 2. Apple Intelligence PCC 隐私云计算与区域准入
+DOMAIN,gspe1-ssl.ls.apple.com,PROXY
+DOMAIN-SUFFIX,issuer.apple.com,PROXY
+DOMAIN-SUFFIX,ropes.apple.com,PROXY
+# mask / apple-relay 同为 iCloud 私密中继入口，开私密中继时走代理会双重隧道
+DOMAIN,mask-api.icloud.com,PROXY
+DOMAIN,mask.icloud.com,PROXY
+DOMAIN,mask-h2.icloud.com,PROXY
+DOMAIN,ss-cleanup-proxy-prod.us-east-1m.app.apple.com,PROXY
+DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,PROXY
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com,PROXY
+DOMAIN-SUFFIX,apple-relay.akamaized.net,PROXY
+DOMAIN-SUFFIX,cp4.cloudflare.com,PROXY
+
+# 3. Siri ChatGPT 扩展与视觉智能
+DOMAIN-SUFFIX,openai.com,PROXY
+DOMAIN-SUFFIX,chatgpt.com,PROXY
+DOMAIN-SUFFIX,chat.com,PROXY
+DOMAIN-SUFFIX,sora.com,PROXY
+DOMAIN-SUFFIX,oaistatic.com,PROXY
+DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+DOMAIN-SUFFIX,oaistatsig.com,PROXY
+DOMAIN,openai-api.arkoselabs.com,PROXY
+DOMAIN-SUFFIX,chatgpt.livekit.cloud,PROXY
+DOMAIN-SUFFIX,host.livekit.cloud,PROXY
+DOMAIN-SUFFIX,turn.livekit.cloud,PROXY
+DOMAIN,lens.google.com,PROXY
+DOMAIN-SUFFIX,gemini.google.com,PROXY
+DOMAIN,gemini.gstatic.com,PROXY
+DOMAIN,generativelanguage.googleapis.com,PROXY
+DOMAIN,proactivebackend-pa.googleapis.com,PROXY
+DOMAIN,robinfrontend-pa.googleapis.com,PROXY
+DOMAIN,aistudio.google.com,PROXY
+DOMAIN,alkalimakersuite-pa.clients6.google.com,PROXY
+DOMAIN-SUFFIX,deepmind.google,PROXY
+DOMAIN-SUFFIX,anthropic.com,PROXY
+DOMAIN-SUFFIX,claude.ai,PROXY
+DOMAIN-SUFFIX,claude.com,PROXY
+DOMAIN-SUFFIX,claudeusercontent.com,PROXY
