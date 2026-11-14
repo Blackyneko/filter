@@ -1,0 +1,16 @@
+# Clean APNs & Identity Direct Rules
+# 纯净版苹果推送与身份直连规则（已剔除会误伤第三方网站的 akadns.net）
+# Version: 1.0.1
+
+DOMAIN,identity.apple.com // Apple ID 设备身份认证直连
+DOMAIN-SUFFIX,push.apple.com // APNs 系统推送通知直连
+DOMAIN-KEYWORD,apple.com.edgekey.net // Apple Akamai 边缘直连
+IP-CIDR,17.249.0.0/16,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.252.0.0/16,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.57.144.0/22,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.188.128.0/18,no-resolve // Apple APNs IPv4 号段
+IP-CIDR,17.188.20.0/23,no-resolve // Apple APNs IPv4 号段
+IP-CIDR6,2403:300:a42::/48,no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2403:300:a51::/48,no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2620:149:a44::/48,no-resolve // Apple APNs IPv6 号段
+IP-CIDR6,2a01:b740:a42::/48,no-resolve // Apple APNs IPv6 号段
